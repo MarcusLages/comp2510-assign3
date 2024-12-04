@@ -55,6 +55,18 @@ build CMakeFiles/COMP2510_assign3.dir/a3.c.obj: C_COMPILER__COMP2510_assign3_uns
   OBJECT_DIR = CMakeFiles\COMP2510_assign3.dir
   OBJECT_FILE_DIR = CMakeFiles\COMP2510_assign3.dir
 
+build CMakeFiles/COMP2510_assign3.dir/test-patients.c.obj: C_COMPILER__COMP2510_assign3_unscanned_Debug C$:/Users/marcu/Documents/BCIT$ Files/COMP2510$ -$ Procedural/COMP2510-assign3/test-patients.c || cmake_object_order_depends_target_COMP2510_assign3
+  DEP_FILE = CMakeFiles\COMP2510_assign3.dir\test-patients.c.obj.d
+  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\COMP2510_assign3.dir
+  OBJECT_FILE_DIR = CMakeFiles\COMP2510_assign3.dir
+
+build CMakeFiles/COMP2510_assign3.dir/patient-list.c.obj: C_COMPILER__COMP2510_assign3_unscanned_Debug C$:/Users/marcu/Documents/BCIT$ Files/COMP2510$ -$ Procedural/COMP2510-assign3/patient-list.c || cmake_object_order_depends_target_COMP2510_assign3
+  DEP_FILE = CMakeFiles\COMP2510_assign3.dir\patient-list.c.obj.d
+  FLAGS = -g -std=gnu99 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\COMP2510_assign3.dir
+  OBJECT_FILE_DIR = CMakeFiles\COMP2510_assign3.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target COMP2510_assign3
@@ -63,7 +75,7 @@ build CMakeFiles/COMP2510_assign3.dir/a3.c.obj: C_COMPILER__COMP2510_assign3_uns
 #############################################
 # Link the executable COMP2510_assign3.exe
 
-build COMP2510_assign3.exe: C_EXECUTABLE_LINKER__COMP2510_assign3_Debug CMakeFiles/COMP2510_assign3.dir/a3.c.obj
+build COMP2510_assign3.exe: C_EXECUTABLE_LINKER__COMP2510_assign3_Debug CMakeFiles/COMP2510_assign3.dir/a3.c.obj CMakeFiles/COMP2510_assign3.dir/test-patients.c.obj CMakeFiles/COMP2510_assign3.dir/patient-list.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\COMP2510_assign3.dir

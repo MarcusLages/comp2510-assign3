@@ -52,7 +52,9 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				2,
+				3
 			]
 		}
 	],
@@ -89,7 +91,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				2,
+				3
 			]
 		},
 		{
@@ -112,6 +116,18 @@
 			"backtrace" : 1,
 			"path" : "a3.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "test-patients.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "patient-list.c",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"
