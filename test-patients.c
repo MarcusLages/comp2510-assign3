@@ -11,9 +11,6 @@ void test_patients(char *input_file_name,  char *output_file_name) {
         exit(EXIT_FAILURE);
     }
 
-    FILE *output = fopen(output_file_name, "w");
-
-    // Setting the stage
     printf("Operations and the list of patients will be displayed here.\n"
            "The final list will be printed in %s\n",
             output_file_name);
