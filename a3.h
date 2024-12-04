@@ -3,6 +3,7 @@
 
 #define MAX_PATIENT_NAME_CHAR   50
 #define FIRST_INDEX             0
+#define EQUALS                  0
 
 typedef struct Patient {
     char name[MAX_PATIENT_NAME_CHAR];

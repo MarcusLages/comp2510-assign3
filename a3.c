@@ -77,27 +77,81 @@ void delete_patient(node **head, const Patient target) {
     node *cur_node = *head;
     node *prev_node = NULL;
 
-    // TODO: finish this shit
     while(cur_node->next != NULL) {
-        if(strcmp(cur_node->patient.name, target.name) != EQUALS) {
 
+        if(strcmp(cur_node->patient.name, target.name) != EQUALS) {
+            if(cur_node == *head) {
+                *head = (*head)->next;
+                free(cur_node);
+                return;
+
+            }
+
+            if(prev_node != NULL) {
+                prev_node->next = cur_node->next;
+            }
+
+            free(cur_node);
+            return;
         }
+
+        prev_node = cur_node;
+        cur_node = cur_node->next;
+    }
+}
+
+void delete_at_position(node **head, const int index) {
+    if(head == NULL || *head == NULL)
+        return;
+
+    int i = 0;
+    node *cur_node = *head;
+    node *prev_node = NULL;
+
+    while(cur_node->next != NULL || i < index) {
         prev_node = cur_node;
         cur_node = cur_node->next;
     }
 
-    prev_node->next = cur_node;
-}
+    if(i == index) {
+        if(cur_node == *head) {
+            *head = (*head)->next;
+            free(cur_node);
+            return;
 
-void delete_at_position(node **head, const int index) {
+        }
 
+        if(prev_node != NULL) {
+            prev_node->next = cur_node->next;
+        }
+
+        free(cur_node);
+    }
 }
 
 void display(node *head) {
+    if(head == NULL) return;
 
+    node *cur_node = head;
+
+    while(cur_node != NULL) {
+        printf("%s", cur_node->patient.name);
+
+        cur_node = cur_node->next;
+    }
 }
 
 void free_list(node *head) {
+    if(head == NULL) return;
 
+    node *cur_node = head;
+
+    while(cur_node != NULL) {
+        node *freed_node = cur_node;
+        cur_node = cur_node->next;
+
+        free(freed_node);
+        freed_node = NULL;
+    }
 }
 
